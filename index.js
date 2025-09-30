@@ -1,8 +1,3 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
-*/
-
 document.addEventListener('DOMContentLoaded', () => {
     // Získání prvků z DOM
     const searchInput = document.getElementById('searchInput');
@@ -161,17 +156,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         saveSearchQuery(query);
         const isIco = /^\d+$/.test(query);
-        const googleQuery = isIco ? `IČO Firmy ${query}` : `${query} Firma`;
+        const googleQuery = isIco ? `Najdi mi IČO FIRMY ${query}` : `${query} Napiš mi informace o FIRMĚ`;
         const url = `https://www.google.com/search?q=${encodeURIComponent(googleQuery)}`;
         openPopup(url);
     });
 
     facebookBtn?.addEventListener('click', () => {
-        handleSearch(query => `https://www.google.com/search?q=${encodeURIComponent(query)}+Facebook`);
+        handleSearch(query => `https://www.google.com/search?q=${encodeURIComponent(query)}+Facebook search`);
     });
 
     linkedinBtn?.addEventListener('click', () => {
-        handleSearch(query => `https://www.google.com/search?q=${encodeURIComponent(query)}+Linkedin`);
+        handleSearch(query => `https://www.google.com/search?q=${encodeURIComponent(query)}+Linkedin search`);
     });
 
     perplexityBtn?.addEventListener('click', () => {

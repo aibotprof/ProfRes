@@ -1,3 +1,4 @@
+
 :root {
     --background-color: #121212;
     --card-background: #1e1e1e;
@@ -35,7 +36,7 @@
 }
 
 html, body {
-    height: 100%;
+    width: 100%;
 }
 
 body {
@@ -44,8 +45,9 @@ body {
     color: var(--primary-text);
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 1rem;
+    align-items: flex-start; /* Změněno z center na flex-start */
+    min-height: 100vh; /* Změněno z height: 100% */
+    padding: 2rem 1rem; /* Upraven padding pro lepší mezeru */
     transition: background-color 0.3s ease, color 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -277,16 +279,35 @@ footer {
     transition: color 0.3s ease;
 }
 
+/* --- Responzivní design --- */
 @media (max-width: 640px) {
+    body {
+        padding: 1rem 0.5rem; /* Zmenšení paddingu pro mobily */
+    }
+
     .card {
         padding: 1.5rem;
     }
 
     header h1 {
-        font-size: 1.75rem;
+        font-size: 1.5rem; /* Zmenšení nadpisu */
+    }
+
+    header p {
+        font-size: 0.85rem;
     }
     
     .actions fieldset {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Tlačítka pod sebou */
+        padding: 1rem 0.75rem 0.75rem;
+    }
+
+    .actions button {
+        font-size: 0.95rem;
+        padding: 0.75rem;
+    }
+
+    button.magic-button {
+        font-size: 1rem;
     }
 }

@@ -162,11 +162,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     facebookBtn?.addEventListener('click', () => {
-        handleSearch(query => `https://www.google.com/search?q=${encodeURIComponent(query)}+Facebook search`);
+        handleSearch(query => `https://www.google.com/search?q=${query}+Facebook search`);
     });
 
     linkedinBtn?.addEventListener('click', () => {
-        handleSearch(query => `https://www.google.com/search?q=${encodeURIComponent(query)}+Linkedin search`);
+        handleSearch(query => `https://www.google.com/search?q=${query}+Linkedin search`);
     });
 
     perplexityBtn?.addEventListener('click', () => {
